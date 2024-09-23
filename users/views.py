@@ -4,4 +4,4 @@ from django.shortcuts import render
 
 # Create your views here.
 def users(request):
-    return render(request, 'user.html')
+    return render(request, 'users/profiles.html')
