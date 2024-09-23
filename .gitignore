@@ -1,2 +1,4 @@
 .idea
 env/
+
+profitpulse/__pycache__/
