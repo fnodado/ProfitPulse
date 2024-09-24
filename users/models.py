@@ -8,6 +8,7 @@ from django.contrib.auth.models import User
 class Profile(models.Model):
     # Link Profile to Django's built-in User model (one-to-one relationship)
     user = models.OneToOneField(User, on_delete=models.CASCADE, null=True, blank=True)
+    username = models.CharField(max_length=200, blank=True, null=True)
     first_name = models.CharField(max_length=255, blank = True, null = True)
     last_name = models.CharField(max_length=255, blank = True, null = True)
     location = models.CharField(max_length=200, blank=True, null=True, default="Earth")
