@@ -45,6 +45,7 @@ def login_page(request):
             print("login user: ", user)
             profile_user = user.profile
             print("profile_user user: ", profile_user.id)
+            messages.success(request, "User logged in")
             return redirect('dashboard')
         else:
             messages.error(request, "Username OR Password is incorrect")
@@ -53,7 +54,7 @@ def login_page(request):
 
 def logout_user(request):
     logout(request)
-    messages.info(request, 'User was logged out!')
+    messages.error(request, 'User was logged out!')
     return redirect('login')
 
 def register_user(request):
@@ -68,6 +69,11 @@ def register_user(request):
             user.save()
 
             messages.success(request, 'User account was created!')
+            login(request, user)
+            return redirect('dashboard')
+        else:
+            messages.error(
+                request, 'An error has occurred during registration')
 
     context = {'page': page, 'form': form}
     return render(request, 'users/login_register.html', context)
