@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'profitpulse.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
-
+# Do not use sqlite3. Change to mysql
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
