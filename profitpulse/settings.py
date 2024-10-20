@@ -80,11 +80,16 @@ WSGI_APPLICATION = 'profitpulse.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 # Do not use sqlite3. Change to mysql
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+	'default': {
+		'ENGINE': 'django.db.backends.mysql',
+		'NAME': 'profitpulse',
+		'USER': 'root',
+		'PASSWORD': 'root',
+		'HOST':'127.0.0.1',
+		'PORT':'3306',
+	}
 }
+
 
 
 # Password validation
