@@ -41,6 +41,7 @@ INSTALLED_APPS = [
 
     #Connect user app to django
     'users.apps.UsersConfig',
+    'trade.apps.TradeConfig',
 ]
 
 MIDDLEWARE = [

@@ -1,14 +1,10 @@
-from lib2to3.fixes.fix_input import context
-
-from django.contrib.auth.models import User
-from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib import messages
 from django.contrib.auth import login, authenticate, logout
+from django.contrib.auth.models import User
+from django.shortcuts import render, redirect
 
 from .forms import CustomUserCreationForm
 from .models import Profile
-from django.contrib import messages
-from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth.decorators import login_required
 
 
 # Create your views here.
