@@ -21,4 +21,5 @@ urlpatterns = [
     path('logout/', views.logout_user, name="logout"),
     path('register/', views.register_user, name="register_user"),
     path('users/', include('users.urls')), ##includes the users app
+    path('trade/', include('trade.urls')), ##includes the trade app
 ]
